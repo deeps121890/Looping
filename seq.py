@@ -21,3 +21,28 @@ Sample Output:
 1
 5
 '''
+# Function to generate the Collatz sequence
+def collatz_sequence(n):
+    count = 0
+    sequence = []
+    
+    while n != 1:
+        sequence.append(n)
+        if n % 2 == 0:  # n is even
+            n = n // 2
+        else:           # n is odd
+            n = 3 * n + 1
+        count += 1
+    
+    sequence.append(1)  # Append the final number 1
+    return sequence, count
+
+# Input reading
+n = int(input())
+
+# Generate and print the sequence
+sequence, steps = collatz_sequence(n)
+for number in sequence:
+    print(number)
+print(steps)
+
