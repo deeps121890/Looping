@@ -10,3 +10,22 @@ Sample Input:
 Sample Output:
 yes
 '''
+# Function to check if n is a factorial number
+def is_factorial(n):
+    if n < 1:
+        return False
+    factorial = 1
+    i = 1
+    while factorial < n:
+        i += 1
+        factorial *= i
+    return factorial == n
+
+# Input reading
+n = int(input())
+
+# Check and print the result
+if is_factorial(n):
+    print("yes")
+else:
+    print("no")
