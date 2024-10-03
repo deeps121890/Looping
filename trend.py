@@ -10,3 +10,24 @@ Sample Input:
 Sample Output:
 Trendy Number
 '''
+# Function to check if the number is a trendy number
+def is_trendy_number(n):
+    # Convert the number to string to check its length
+    str_n = str(n)
+    
+    # Check if the number has exactly 3 digits
+    if len(str_n) == 3:
+        # Get the middle digit
+        middle_digit = int(str_n[1])
+        # Check if the middle digit is divisible by 3
+        if middle_digit % 3 == 0:
+            return "Trendy Number"
+    
+    return "Not a Trendy Number"
+
+# Input reading
+n = int(input())
+
+# Check and print the result
+result = is_trendy_number(n)
+print(result)
